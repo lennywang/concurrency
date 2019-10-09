@@ -29,6 +29,6 @@ public class ch03_01_01_ReentrantLock implements Runnable {
         thread2.start();
         thread1.join();
         thread2.join();
-        System.out.println(i);
+        System.out.println(i);//20000000
     }
 }

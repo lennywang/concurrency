@@ -49,11 +49,15 @@ public class ch03_01_01_02_IntLock implements Runnable {
     public static void main(String[] args) throws InterruptedException {
         ch03_01_01_02_IntLock intLock1 = new ch03_01_01_02_IntLock(1);
         ch03_01_01_02_IntLock intLock2 = new ch03_01_01_02_IntLock(2);
-        Thread thread1 = new Thread(intLock1);
-        Thread thread2 = new Thread(intLock2);
+        Thread thread1 = new Thread(intLock1,"Thread-1");
+        Thread thread2 = new Thread(intLock2,"Thread-2");
         thread1.start();
         thread2.start();
-        TimeUnit.SECONDS.sleep(1);
+        TimeUnit.SECONDS.sleep(2);
         thread2.interrupt();
+
+        //java.lang.InterruptedException
+        //Thread-2:綫程退出
+        //Thread-1:綫程退出
     }
 }

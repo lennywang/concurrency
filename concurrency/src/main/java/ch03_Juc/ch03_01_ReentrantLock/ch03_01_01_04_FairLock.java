@@ -25,5 +25,10 @@ public class ch03_01_01_04_FairLock implements Runnable {
         Thread thread_t2 = new Thread(fairLock, "Thread_t2");
         thread_t1.start();
         thread_t2.start();
+
+        //Thread_t1获得锁
+        //Thread_t2获得锁
+        //Thread_t1获得锁
+        //Thread_t2获得锁
     }
 }

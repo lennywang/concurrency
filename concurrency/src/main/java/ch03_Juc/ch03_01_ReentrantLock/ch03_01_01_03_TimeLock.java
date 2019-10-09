@@ -29,5 +29,7 @@ public class ch03_01_01_03_TimeLock implements Runnable {
         Thread thread2 = new Thread(timeLock);
         thread1.start();
         thread2.start();
+
+        //get lock fail
     }
 }

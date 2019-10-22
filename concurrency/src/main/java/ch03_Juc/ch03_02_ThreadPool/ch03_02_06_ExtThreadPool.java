@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 /**
  *
  **/
-public class ch03_02_04_03_ExtThreadPool {
+public class ch03_02_06_ExtThreadPool {
     public static class MyTask implements Runnable{
         public String name;
         public MyTask(String name){
@@ -27,6 +27,8 @@ public class ch03_02_04_03_ExtThreadPool {
     }
 
     public static void main(String[] args) {
+        Integer integer= Runtime.getRuntime().availableProcessors();
+        System.out.println(integer);
         ExecutorService executorService = new ThreadPoolExecutor(5, 5, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>()) {
             @Override
             protected void beforeExecute(Thread t, Runnable r) {

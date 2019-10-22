@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 /**
  *
  **/
-public class ch03_02_04_02_ThreadFactory {
+public class ch03_02_05_ThreadFactory {
     public static class MyTask implements Runnable{
 
         public void run() {
